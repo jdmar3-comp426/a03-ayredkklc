@@ -1,5 +1,5 @@
 {
-  "name": "a03",
+  "name": "a03-ayredkklc",
   "version": "2.1.0",
   "type": "module",
   "description": "",
@@ -11,6 +11,10 @@
     "medium_2": "node src/medium/medium_2.js",
     "medium_3": "node src/medium/medium_3.js",
     "spicy_9": "node src/spicy/spicy_9.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jdmar3-comp426/a03-ayredkklc.git"
   },
   "author": "",
   "license": "GPL-3.0-or-later"

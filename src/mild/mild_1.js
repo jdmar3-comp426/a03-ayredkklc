@@ -13,6 +13,7 @@ export function sumToString(a, b) {
     var string = a + " + " + b + " = " + sum;
     return string;
 }
+sumToString(4, 5);
 
 
 /**
