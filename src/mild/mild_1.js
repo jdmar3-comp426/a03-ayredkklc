@@ -9,7 +9,9 @@
  * see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
  */
 export function sumToString(a, b) {
-
+    var sum = a + b;
+    var string = a + " + " + b + " = " + sum;
+    return string;
 }
 
 
@@ -24,7 +26,11 @@ export function sumToString(a, b) {
  *
  */
 export function getIncreasingArray(startNumber, endNumber) {
-
+    const number =[];
+    for(let i = 0; i < endNumber - startNumber + 1; i++){
+        number[i] = startNumber + i;
+    }
+    return number;
 }
 
 /**
