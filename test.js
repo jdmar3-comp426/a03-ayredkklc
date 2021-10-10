@@ -1,3 +1,4 @@
-import {countArray} from "./src/mild/mild_1.js";  
+import {identifyVariable} from "./src/mild/mild_2.js";  
   
-console.log(countArray([1, 2]));
+console.log(identifyVariable(true));
+console.log(identifyVariable("hi"));

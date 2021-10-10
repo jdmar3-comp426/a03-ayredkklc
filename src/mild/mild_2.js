@@ -6,7 +6,29 @@
  * returns: { type: 'number', value: 4 }
  */
 export function identifyVariable(variable) {
+   let counter = {};
+   const arr =["undefined", "object", "boolean", "number", "string", "function", "symbol", "bigint"];
+   if(typeof variable == "undefined"){
+      counter[arr[0]] = variable;
+   }else if(typeof variable == "object"){
+      counter[arr[1]] = variable;
+   }else if(typeof variable == "boolean"){
+      counter[arr[2]] = variable;
+   }else if(typeof variable == "number"){
+      counter[arr[3]] = variable;
+   }else if(typeof variable == "string"){
+      counter[arr[4]] = variable;
+   }else if(typeof variable == "function"){
+      counter[arr[5]] = variable;
+   }else if(typeof variable == "symbol"){
+      counter[arr[6]] = variable;
+   }else if(typeof variable == "bigint"){
+      counter[arr[7]] = variable;
+   }
 
+   //counter[arr[3]] = variable;
+   return counter;
+   
 }
 
 
