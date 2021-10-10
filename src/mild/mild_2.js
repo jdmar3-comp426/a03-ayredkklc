@@ -7,59 +7,42 @@
  */
 export function identifyVariable(variable) {
    let counter = {};
-   //const arrr = ["type", "value"];
-   //const arr =["undefined", "object", "boolean", "number", "string", "function", "symbol", "bigint"];
-   /*if(typeof variable == "undefined"){
-      counter[arrr[0]] == arr[0];
-      //counter[arr[0]] = variable;
-   }else if(typeof variable == "object"){
-      //counter[arr[1]] = variable;
-      counter[arrr[0]] == arr[1];
-   }else if(typeof variable == "boolean"){
-      counter[arrr[0]] == arr[2];
-      //counter[arr[2]] = variable;
-   }else if(typeof variable == "number"){
-      counter[arrr[0]] == arr[3];
-      //counter[arr[3]] = variable;
-   }else if(typeof variable == "string"){
-      counter[arrr[0]] == arr[4];
-      //counter[arr[4]] = variable;
-   }else if(typeof variable == "function"){
-      counter[arrr[0]] == arr[5];
-      //counter[arr[5]] = variable;
-   }else if(typeof variable == "symbol"){
-      counter[arrr[0]] == arr[6];
-
-      //counter[arr[6]] = variable;
-   }else if(typeof variable == "bigint"){
-      counter[arrr[0]] == arr[7];
-      //counter[arr[7]] = variable;
-   }*/
-   //counter[arrr[1]] == variable;
-   //counter[arrr[0]] == arr[0];
-   //counter[arr[3]] = variable;
-   //let counter = {};
    const arr =["undefined", "object", "boolean", "number", "string", "function", "symbol", "bigint"];
    const arrr = ["type", "value"];
+   const s1 = [];
+   //const s2 = [];
    if(typeof variable == "undefined"){
       counter[arrr[0]] = arr[0];
+      s1[0] = arr[0];
    }else if(typeof variable == "object"){
       counter[arrr[0]] = arr[1];
+      s1[0] = arr[1];
    }else if(typeof variable == "boolean"){
       counter[arrr[0]] = arr[2];
+      s1[0] = arr[2];
    }else if(typeof variable == "number"){
       counter[arrr[0]] = arr[3];
+      s1[0] = arr[3];
    }else if(typeof variable == "string"){
       counter[arrr[0]] = arr[4];
+      s1[0] = arr[4];
    }else if(typeof variable == "function"){
       counter[arrr[0]] = arr[5];
+      s1[0] = arr[5];
    }else if(typeof variable == "symbol"){
       counter[arrr[0]] = arr[6];
+      s1[0] = arr[6];
    }else if(typeof variable == "bigint"){
       counter[arrr[0]] = arr[7];
+      s1[0] = arr[7];
    }
    counter[arrr[1]] = variable;
-   return counter;
+   s1[1] = variable;
+   return {
+      type: s1[0],
+      value: s1[1]
+
+  }
    
 }
 
