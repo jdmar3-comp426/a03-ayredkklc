@@ -7,26 +7,58 @@
  */
 export function identifyVariable(variable) {
    let counter = {};
-   const arr =["undefined", "object", "boolean", "number", "string", "function", "symbol", "bigint"];
-   if(typeof variable == "undefined"){
-      counter[arr[0]] = variable;
+   //const arrr = ["type", "value"];
+   //const arr =["undefined", "object", "boolean", "number", "string", "function", "symbol", "bigint"];
+   /*if(typeof variable == "undefined"){
+      counter[arrr[0]] == arr[0];
+      //counter[arr[0]] = variable;
    }else if(typeof variable == "object"){
-      counter[arr[1]] = variable;
+      //counter[arr[1]] = variable;
+      counter[arrr[0]] == arr[1];
    }else if(typeof variable == "boolean"){
-      counter[arr[2]] = variable;
+      counter[arrr[0]] == arr[2];
+      //counter[arr[2]] = variable;
    }else if(typeof variable == "number"){
-      counter[arr[3]] = variable;
+      counter[arrr[0]] == arr[3];
+      //counter[arr[3]] = variable;
    }else if(typeof variable == "string"){
-      counter[arr[4]] = variable;
+      counter[arrr[0]] == arr[4];
+      //counter[arr[4]] = variable;
    }else if(typeof variable == "function"){
-      counter[arr[5]] = variable;
+      counter[arrr[0]] == arr[5];
+      //counter[arr[5]] = variable;
    }else if(typeof variable == "symbol"){
-      counter[arr[6]] = variable;
-   }else if(typeof variable == "bigint"){
-      counter[arr[7]] = variable;
-   }
+      counter[arrr[0]] == arr[6];
 
+      //counter[arr[6]] = variable;
+   }else if(typeof variable == "bigint"){
+      counter[arrr[0]] == arr[7];
+      //counter[arr[7]] = variable;
+   }*/
+   //counter[arrr[1]] == variable;
+   //counter[arrr[0]] == arr[0];
    //counter[arr[3]] = variable;
+   //let counter = {};
+   const arr =["undefined", "object", "boolean", "number", "string", "function", "symbol", "bigint"];
+   const arrr = ["type", "value"];
+   if(typeof variable == "undefined"){
+      counter[arrr[0]] = arr[0];
+   }else if(typeof variable == "object"){
+      counter[arrr[0]] = arr[1];
+   }else if(typeof variable == "boolean"){
+      counter[arrr[0]] = arr[2];
+   }else if(typeof variable == "number"){
+      counter[arrr[0]] = arr[3];
+   }else if(typeof variable == "string"){
+      counter[arrr[0]] = arr[4];
+   }else if(typeof variable == "function"){
+      counter[arrr[0]] = arr[5];
+   }else if(typeof variable == "symbol"){
+      counter[arrr[0]] = arr[6];
+   }else if(typeof variable == "bigint"){
+      counter[arrr[0]] = arr[7];
+   }
+   counter[arrr[1]] = variable;
    return counter;
    
 }
