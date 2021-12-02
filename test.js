@@ -1,4 +1,11 @@
-import {identifyVariable} from "./src/mild/mild_2.js";  
+import {removeKey} from "./src/mild/mild_2.js";  
   
-console.log(identifyVariable('purple'));
-console.log(identifyVariable("hi"));
+//console.log(identifyArray(['purple', 3]));
+let obj = {
+    name: 'Mr. Boss',
+    title: 'boss',
+    age: 33,
+    password: 'pass123'
+};
+//removeKey(obj, 'password');
+console.log(removeKey(obj));

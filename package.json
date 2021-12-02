@@ -4,6 +4,7 @@
   
   "description": "",
   "main": " test.js",
+  "type": "module",
   "scripts": {
     "main": "node src/main.js",
     "test": "node test.js",
