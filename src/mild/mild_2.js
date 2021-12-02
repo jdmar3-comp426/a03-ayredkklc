@@ -60,42 +60,12 @@ export function identifyVariable(variable) {
  ]
 
  */
-export function identifyArray(array) {
-   
-   const arr =["undefined", "object", "boolean", "number", "string", "function", "symbol", "bigint"];
-   const arrr = ["type", "value"];
-   const sol = [];
-   var i  = 0;
-   /*array.forEach(item => {
-      let counter = {};
-      if(typeof item == "undefined"){
-         counter[arrr[0]] = arr[0];
-      }else if(typeof item == "object"){
-         counter[arrr[0]] = arr[1];
-      }else if(typeof item == "boolean"){
-         counter[arrr[0]] = arr[2];
-      }else if(typeof item == "number"){
-         counter[arrr[0]] = arr[3];
-      }else if(typeof item == "string"){
-         counter[arrr[0]] = arr[4];
-      }else if(typeof item == "function"){
-         counter[arrr[0]] = arr[5];
-      }else if(typeof item == "symbol"){
-         counter[arrr[0]] = arr[6];
-      }else if(typeof item == "bigint"){
-         counter[arrr[0]] = arr[7];
-      }
-      counter[arrr[1]] = item;
-      sol[i] = counter;
-  });*/
-  array.forEach(item => {
-   if(counter[item]){
-       counter[item]++;
-   }else{
-       counter[item] = 1;
+ export function identifyArray(array) {
+   const res = [];
+   for (let i = 0; i < array.length; i++) {
+      res.push(identifyVariable(array[i]));
    }
-});
-  return 1;
+   return res;
 }
 
 /**
@@ -140,10 +110,15 @@ export function removeKey(object, key) {
  obj will not have the `password` field only because it was assigned the result of the function.
  If only `removeKeyNonDestructive` was called, nothing would have changed.
  */
-export function removeKeyNonDestructive(object, key) {
-   delete object[key];
+ export function removeKeyNonDestructive(object, key) {
+   var newObj = {};
+   for (const [key1, value1] of Object.entries(object)){
+      if (!(key1 === key)) {
+         newObj[key1] = value1;
+      }
+   } 
+   return newObj;
 }
-
 /**
  * Remove and return the listed keys. Without mutating the object passed in.
  * @param object
@@ -165,6 +140,12 @@ export function removeKeyNonDestructive(object, key) {
 
  * @return {*} The object with its keys removed.
  */
-export function removeKeys(object, keyList) {
-
+ export function removeKeys(object, keyList) {
+   var newObj = {};
+   for (const [key1, value1] of Object.entries(object)){
+      if (!(keyList.includes(key1))) {
+         newObj[key1] = value1;
+      }
+   } 
+   return newObj;
 }
